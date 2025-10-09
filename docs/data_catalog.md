@@ -68,3 +68,4 @@ Central fact table combining transaction data with customer behavior metrics
 | conversion_rate   | FLOAT     | Conversion rate percentage.                                               |
 
 
+
