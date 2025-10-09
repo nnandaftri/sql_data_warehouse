@@ -15,9 +15,9 @@ Product master data dimension
 | Column Name       | Data Type     | Description                                                                           |
 |-------------------|---------------|---------------------------------------------------------------------------------------|
 | product_key       | INT           | Surrogate key uniquely identifying each product record in the product dimension table.|
-| product_id        | INT           | A unique identifier assigned to the product for internal tracking and referencing.    |
-| product_name      | NVARCHAR(50)  | Descriptive name of the product, including key details such as type, color, and size. |
-| product_category  | NVARCHAR(50)  | The broader classification of the product (e.g., ) to group related items.            |
+| product_id        | NVARCHAR      | A unique identifier assigned to the product for internal tracking and referencing.    |
+| product_name      | NVARCHAR      | Descriptive name of the product, including key details such as type, color, and size. |
+| product_category  | NVARCHAR      | The broader classification of the product (e.g., ) to group related items.            |
 
 ---
 
@@ -35,9 +35,10 @@ Date dimension for time-based analysis
 | year           | INT          | Calendar year.                                                                  |
 | quarter        | INT          | Quarter number(1-4).                                                            |
 | month          | INT          | Month number (1-12).                                                            |
-| month_name     | NVARCHAR(50) | Full month name.                                                                |
-| day_name       | NVARCHAR(50) | Day of week name.                                                               |
-| day_type       | NVARCHAR(50) | Weekday/Weekend classification.                                                 |
+| month_name     | NVARCHAR     | Full month name.                                                                |
+| week_number    | INT          | Week number in year.                                                            |
+| day_name       | NVARCHAR     | Day of week name.                                                               |
+| day_type       | VARCHAR      | Weekday/Weekend classification.                                                 |
 
 ---
 
@@ -53,10 +54,9 @@ Central fact table combining transaction data with customer behavior metrics
 |-------------------|-----------|---------------------------------------------------------------------------|
 | product_key       | INT       | Surrogate key linking the transaction to the product dimension table.     |
 | date_key          | INT       | Surrogate key linking the transaction to the date dimension table.        |
-| transaction_date  | DATE      | The date when the order was placed.                                       |
 | total_unit_sold   | INT       | Total units sold per product per day.                                     |
-| product_cost      | FLOAT     | Product cost price.                                                       |
-| product_price     | FLOAT     | Product selling price.                                                    |
+| cost_each         | FLOAT     | Product cost price.                                                       |
+| price_each        | FLOAT     | Product selling price.                                                    |
 | total_revenue     | FLOAT     | Total revenue (units × price).                                            |
 | total_profit      | FLOAT     | Total profit (units × (price - cost)).                                    |
 | total_cost        | FLOAT     | Total cost (units × cost).                                                |
@@ -66,4 +66,5 @@ Central fact table combining transaction data with customer behavior metrics
 | total_views       | INT       | Number of product views.                                                  |
 | click_through_rate| FLOAT     | Click_through rate percentage.                                            |
 | conversion_rate   | FLOAT     | Conversion rate percentage.                                               |
+
 
