@@ -25,7 +25,7 @@ Product master data dimension
 Date dimension for time-based analysis
 
 - **Primary Key**: date_key
-- **Date Range**: [Start Date] - [End Date]
+- **Date Range**: [2024-01-01] - [2025-09-30]
 - **Columns**:
 
 | Column Name    | Data Type    | Description                                                                     |
@@ -65,4 +65,5 @@ Central fact table combining transaction data with customer behavior metrics
 | total_clicks      | INT       | Number of product clicks.                                                 |
 | total_views       | INT       | Number of product views.                                                  |
 | click_through_rate| FLOAT     | Click_through rate percentage.                                            |
+
 | conversion_rate   | FLOAT     | Conversion rate percentage.                                               |
