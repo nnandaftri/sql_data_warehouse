@@ -21,13 +21,23 @@ Implementation of a **star schema** data warehouse for e-commerce analytics, com
 
 ### Installation
 1. Clone the repository
- ```
-git clone https://github.com/nnandaftri/sql_data_warehouse.git
-cd sql_data_warehouse
-```
+    ```
+    git clone https://github.com/nnandaftri/sql_data_warehouse.git
+    cd sql_data_warehouse
+    ```
+2. Install the necessary dependencies.
 3. Execute setup scripts in order:
-
-4. Run the complete pipeline:
+    ```
+    1. \scripts\init_database.sql
+    2. bronze
+        - \scripts\bronze\ddl_bronze.sql
+        - \scripts\bronze\procedure_load_bronze.sql
+    3. silver
+        - \scripts\silver\ddl_silver.sql
+        - \scripts\silver\procedure_load_silver.sql
+    4. gold
+        - \scripts\gold\ddl_silver.sql
+    ```
 
 ## 📋 TODO & Roadmap
 - Real-time data integration
