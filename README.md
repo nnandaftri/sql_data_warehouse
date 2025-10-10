@@ -21,7 +21,10 @@ Implementation of a **star schema** data warehouse for e-commerce analytics, com
 
 ### Installation
 1. Clone the repository
- `https://github.com/nnandaftri/sql_data_warehouse.git`
+ ```
+git clone https://github.com/nnandaftri/sql_data_warehouse.git
+cd sql_data_warehouse
+```
 3. Execute setup scripts in order:
 
 4. Run the complete pipeline:
