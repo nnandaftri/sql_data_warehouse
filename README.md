@@ -39,12 +39,5 @@ Implementation of a **star schema** data warehouse for e-commerce analytics, com
         - \scripts\gold\ddl_silver.sql
     ```
 
-## 📋 TODO & Roadmap
-- Real-time data integration
-- Advanced data quality framework
-- Machine learning integration
-- Cloud deployment scripts
-- Docker containerization
-
 ## 📄 License
 This project is licensed under the [MIT License](https://github.com/nnandaftri/sql_data_warehouse/blob/main/LICENSE). You are free to use, modify, and share this project with proper attribution.
